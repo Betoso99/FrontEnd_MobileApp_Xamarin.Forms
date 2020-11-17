@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Login.HomePage"
+                  Title="Home">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu" BackgroundColor="Black">
+            <StackLayout VerticalOptions="Center">
+                <Button Text="Home" BackgroundColor="Red" Margin="25,0,25,0" TextColor="White"/>
+                <Button Text="Opcion 1"  BackgroundColor="Red" Margin="25,0,25,0" TextColor="White"/>
+                <Button Text="Opcion 2"  BackgroundColor="Red" Margin="25,0,25,0" TextColor="White"/>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage BarBackgroundColor="Red">
+            <x:Arguments>
+                <ContentPage BackgroundImageSource="Wallpaper.jpg">
+                    <ScrollView>
+                        <Grid HorizontalOptions="CenterAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="0" Text="First time here?" FontAttributes="Bold" Margin="25,0,0,0" />
+                            <Label Grid.Row="1" Text="Check the More about section to see intereting things that u didnt know" 
+                                   Margin="25,0,25,0"/>
+                            <Frame Grid.Row="2" Margin="25,0,25,20" BackgroundColor="White">
+                                <StackLayout>
+                                    <Image Source="Icono1.png" Grid.Row="0"/>
+                                    <Label Text="Welcome to this community" Grid.Row="1" HorizontalOptions="CenterAndExpand"
+                                           FontSize="Title" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                                    <Label Text="Here you can find annything you wanted to know about Anime or manga" Grid.Row="2" 
+                                           HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"
+                                           FontSize="Body"/>
+                                </StackLayout>
+                            </Frame>
+                            <Label Grid.Row="3" Text="More about" Margin="25,0,0,0" FontAttributes="Bold" TextColor="White"/>
+                            <Grid Grid.Row="4" ColumnSpacing="10" RowSpacing="10" HorizontalOptions="CenterAndExpand">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="150*"/>
+                                    <ColumnDefinition Width="150*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Button Text="Anime" Grid.Row="0" TextColor="White" Grid.Column="0" BackgroundColor="MediumAquamarine"/>
+                                <Button Text="Manga" Grid.Row="0" TextColor="White" Grid.Column="1" BackgroundColor="CadetBlue"/>
+                                <Button Text="Characters" Grid.Row="1" TextColor="White" Grid.Column="0" BackgroundColor="Turquoise"/>
+                                <Button Text="Wiki" Grid.Row="1" TextColor="White" Grid.Column="1" BackgroundColor="SlateGray"/>
+                                <Button Text="Fun Facts" Grid.Row="2" TextColor="White" Grid.Column="0" BackgroundColor="BlueViolet"/>
+                                <Button Text="Communitys" Grid.Row="2" TextColor="White" Grid.Column="1" BackgroundColor="Coral"/>
+                            </Grid>
+                        </Grid>
+                    </ScrollView>
+                </ContentPage>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
